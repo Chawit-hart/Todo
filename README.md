@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Todo App with Next.js and TypeScript
+
+A simple Todo app built with **Next.js** and **TypeScript**, featuring JWT authentication, cookie-based session management, and CRUD operations for todos.
+
+## Features
+- User authentication with JWT tokens.
+- Todos are stored in a database, and each user can only access their own todos.
+- CRUD operations (Create, Read, Update, Delete) for managing todos.
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+Before you begin, ensure that you have the following installed:
+- **Node.js** (LTS version recommended): [Download Node.js](https://nodejs.org/)
+- **npm** (Node Package Manager): This should be installed automatically with Node.js
+- **Database** (MongoDB, PostgreSQL, or SQLite for testing purposes)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Installation
+1. **Clone the repository**:
+   Open your terminal and run the following command to clone the repository:
+   ```bash
+   git clone https://github.com/your-username/todo-app.git
+   cd todo-app
+``` Install dependencies: Once you're inside the project directory, run the following command to install all the necessary ``` dependencies:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+``` npm install ```
+``` Create a .env file: Create a file named .env in the root directory of the project. Add the following environment variables: ```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+``` DATABASE_URL=your-database-connection-string ```
+``` JWT_SECRET=your-jwt-secret-key ```
+Replace your-database-connection-string with your database URL (for example, MongoDB or PostgreSQL).
+Replace your-jwt-secret-key with a secret string used to sign your JWT tokens.
+``` Run the development server: Now, you can start the development server using the following command: ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+``` npm run dev ```
+This will start the application on http://localhost:3000.
 
-## Learn More
+Open the app: Open your browser and navigate to http://localhost:3000 to view the app in action.
 
-To learn more about Next.js, take a look at the following resources:
+Usage
+The app provides a login page where users can log in and view their personal todo list.
+Authenticated users can add, edit, and delete todos.
+Todos are stored securely in a database, and the application uses JWT tokens for authentication and authorization.
+Contributing
+Fork the repository.
+Create a new branch (git checkout -b feature/your-feature).
+Commit your changes (git commit -am 'Add new feature').
+Push to the branch (git push origin feature/your-feature).
+Open a pull request.
+License
+Distributed under the MIT License. See LICENSE for more information.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Contact
+Your Name - your.email@example.com
+Project Link: https://github.com/your-username/todo-app
